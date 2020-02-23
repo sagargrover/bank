@@ -1,0 +1,7 @@
+date_time_format: '%Y-%m-%dT%H:%M:%S.%fZ'
+
+window_size: 3
+window_delta:
+  hours: 0
+  mins: 2
+  seconds: 0

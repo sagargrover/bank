@@ -1,72 +1,66 @@
 import unittest
 import datetime
 import yaml
-import json
 from mock import patch
-from app.violations.violations import HighFrequencySmallIntervalViolation, DuplicateTransactionViolation
 
+
+from app.violations.violations import HighFrequencySmallIntervalViolation, DuplicateTransactionViolation
 from app.transaction.transaction import Transaction
 from app.transaction.recent_transactions import RecentTransactions
-
-
 
 
 class TestRecentTransactions(unittest.TestCase):
     def setUp(self):
         self.config = yaml.load(open('config.yml'))
         self.date = datetime.datetime(2019, 2, 13, 10, 0, 0)
-        #import ipdb; ipdb.set_trace()
+        self.datetime_obj = datetime.datetime
+        delta = datetime.timedelta(minutes=2)
+        self.recent_transactions = RecentTransactions(3, delta)
+        # import ipdb; ipdb.set_trace()
 
     def test_high_freq(self):
         with patch('datetime.datetime') as mock_date:
             mock_date.now.return_value = self.date
-            mock_date.side_effect = lambda *args, **kw: datetime.datetime(*args, **kw)
-            #mock_date.side_effect = lambda *args, **kw: date(*args, **kw)
-            delta = datetime.timedelta(seconds=20)
-            recent_transactions = RecentTransactions(3, delta)
-            #datetime.datetime.now = Mock()
-            #datetime.datetime.now = datetime.datetime(2019, 2, 13, 10, 0, 0)
-            transaction_time = datetime.datetime.now()
-            #print(transaction_time
+            mock_date.side_effect = lambda *args, **kw: self.datetime_obj(*args, **kw)
+
+            # 1st transaction at edge of window
+            transaction_time = datetime.datetime(2019, 2, 13, 9, 58, 0)
             transaction_time_str = transaction_time.strftime(self.config["date_time_format"])
             test_transaction = dict()
             test_transaction["merchant"] = "Burger King"
             test_transaction["amount"] = 20
             test_transaction["time"] = transaction_time_str
-            #print(json.dumps(test_transaction))
             transaction = Transaction(test_transaction, self.config["date_time_format"])
-            print(transaction)
-            self.assertEqual(recent_transactions.is_valid_transaction(transaction), (True, None))
-            recent_transactions.add_recent_transaction(transaction)
+            self.assertEqual(self.recent_transactions.is_valid_transaction(transaction), (True, None))
+            self.recent_transactions.add_recent_transaction(transaction)
 
-            transaction_time = datetime.datetime.now() + datetime.timedelta(minutes=1)
+            # 2nd transaction
+            transaction_time = datetime.datetime(2019, 2, 13, 9, 59, 30)
             transaction_time_str = transaction_time.strftime(self.config["date_time_format"])
             test_transaction["amount"] = 21
             test_transaction["time"] = transaction_time_str
             transaction = Transaction(test_transaction, self.config["date_time_format"])
-            print(transaction)
-            self.assertEqual(recent_transactions.is_valid_transaction(transaction), (True, None))
-            recent_transactions.add_recent_transaction(transaction)
+            self.assertEqual(self.recent_transactions.is_valid_transaction(transaction), (True, None))
+            self.recent_transactions.add_recent_transaction(transaction)
 
-            transaction_time = datetime.datetime.now() + datetime.timedelta(minutes=1, seconds=30)
+            # 3rd transaction
+            transaction_time = datetime.datetime(2019, 2, 13, 9, 59, 50)
             transaction_time_str = transaction_time.strftime(self.config["date_time_format"])
             test_transaction["amount"] = 22
             test_transaction["time"] = transaction_time_str
             transaction = Transaction(test_transaction, self.config["date_time_format"])
-            print(transaction)
-            self.assertEqual(recent_transactions.is_valid_transaction(transaction), (True, None))
-            recent_transactions.add_recent_transaction(transaction)
+            self.assertEqual(self.recent_transactions.is_valid_transaction(transaction), (True, None))
+            self.recent_transactions.add_recent_transaction(transaction)
 
-            #sleep(20)
-            transaction_time = datetime.datetime.now() + datetime.timedelta(minutes=3)
+            # 4th transaction - invalid
+            transaction_time = datetime.datetime(2019, 2, 13, 9, 59, 59)
             transaction_time_str = transaction_time.strftime(self.config["date_time_format"])
             test_transaction["amount"] = 23
             test_transaction["time"] = transaction_time_str
             transaction = Transaction(test_transaction, self.config["date_time_format"])
-            print(transaction)
-            is_valid = recent_transactions.is_valid_transaction(transaction)
+            is_valid = self.recent_transactions.is_valid_transaction(transaction)
             self.assertEqual((is_valid[0], type(is_valid[1])), (False, type(HighFrequencySmallIntervalViolation())))
-            recent_transactions.add_recent_transaction(transaction)
+            self.recent_transactions.add_recent_transaction(transaction)
 
     """
     def test_duplicate(self):
@@ -104,10 +98,11 @@ class TestRecentTransactions(unittest.TestCase):
         transaction = Transaction((test_transaction), self.config["date_time_format"])
         is_valid = recent_transactions.is_valid_transaction(transaction)
         self.assertEqual((is_valid[0], type(is_valid[1])), (False, type(DuplicateTransactionViolation())))
+    
     """
 
     def tearDown(self):
-        pass
+        self.recent_transactions = None
 
 
 if __name__ == '__main__':

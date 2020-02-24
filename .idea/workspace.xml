@@ -2,18 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="21e31b06-a0e7-412a-8aca-95093cad90cc" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app.py" afterPath="$PROJECT_DIR$/app.py" />
-      <change beforePath="$PROJECT_DIR$/app/account/account.py" afterPath="$PROJECT_DIR$/app/account/account.py" />
-      <change beforePath="$PROJECT_DIR$/app/stream/file_stream.py" afterPath="$PROJECT_DIR$/app/stream/file_stream.py" />
-      <change beforePath="$PROJECT_DIR$/app/transaction/recent_transactions.py" afterPath="$PROJECT_DIR$/app/transaction/recent_transactions.py" />
-      <change beforePath="$PROJECT_DIR$/app/utils/singelton.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/config.yml" afterPath="$PROJECT_DIR$/config.yml" />
-      <change beforePath="$PROJECT_DIR$/logs/access_log.log" afterPath="$PROJECT_DIR$/logs/access_log.log" />
-      <change beforePath="$PROJECT_DIR$/test/account/account_reintialization_test.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/test/transaction/recent_transactions_duplicate_test.py" afterPath="$PROJECT_DIR$/test/transaction/recent_transactions_duplicate_test.py" />
-      <change beforePath="$PROJECT_DIR$/test/transaction/recent_transactions_high_freq_test.py" afterPath="$PROJECT_DIR$/test/transaction/recent_transactions_high_freq_test.py" />
-      <change beforePath="$PROJECT_DIR$/test/transaction/recent_transactions_test.py" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -24,18 +14,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="transaction_test.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/transaction/transaction_test.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="452">
-              <caret line="19" column="32" lean-forward="false" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="file_stream.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/stream/file_stream.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -48,7 +26,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="file_stream_test.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="file_stream_test.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/stream/file_stream_test.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="502">
@@ -56,6 +34,16 @@
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="72">
+              <caret line="3" column="5" lean-forward="false" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -177,7 +165,6 @@
         <option value="$PROJECT_DIR$/test/violations/violations_test.py" />
         <option value="$PROJECT_DIR$/test/account/account_reintialization_test.py" />
         <option value="$PROJECT_DIR$/settings.py" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/ops/yaml/config.yml" />
         <option value="$PROJECT_DIR$/ops/scripts/install.sh" />
         <option value="$PROJECT_DIR$/Dockerfile" />
@@ -194,6 +181,7 @@
         <option value="$PROJECT_DIR$/app/stream/file_stream.py" />
         <option value="$PROJECT_DIR$/app/utils/capture_stdout.py" />
         <option value="$PROJECT_DIR$/test/stream/file_stream_test.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -517,14 +505,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="2" column="5" lean-forward="false" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ops/yaml/config.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
@@ -696,6 +676,14 @@
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="3" column="5" lean-forward="false" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>

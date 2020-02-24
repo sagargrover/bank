@@ -14,7 +14,7 @@ class RecentTransactions:
     def in_window(self, transaction):
         transaction_time = transaction.get_time()
         current_time = datetime.datetime.now()
-        print(current_time - transaction_time)
+        #print(current_time - transaction_time)
         if current_time - transaction_time <= self.__window_delta_time:
             return True
         return False

@@ -1,9 +1,10 @@
 import yaml
 import datetime
 import json
+yaml.warnings({'YAMLLoadWarning': False})
 
 from app.transaction.recent_transactions import RecentTransactions
-from app.violations.violations import AccountAlreadyIntialized,InsufficientLimit
+from app.violations.violations import AccountAlreadyIntialized, InsufficientLimit, CardNotActive
 from app.transaction.transaction import Transaction
 
 
@@ -12,7 +13,7 @@ class Account(object):
     class __Account:
         def __init__(self, a_dict):
             self.__limit = float(a_dict.get('available-limit'))
-            self.__has_active_card = a_dict.get('active-card') == 'true'
+            self.__has_active_card = (str(a_dict.get('active-card')).lower() == 'true')
             self.__violations = []
             self.config = yaml.load(open('config.yml'))
             delta = datetime.timedelta(hours=self.config["window_delta"]["hours"],
@@ -34,8 +35,8 @@ class Account(object):
         def get_limit(self):
             return self.__limit
 
-        def set_limit(self, limit):
-            self.__limit = limit
+        def deduct_amount(self, amount):
+            self.__limit = self.__limit - amount
 
         def get_card_status(self):
             return self.__has_active_card
@@ -48,8 +49,11 @@ class Account(object):
 
         def validate_transaction(self, transaction: Transaction):
             is_valid = True
+            #print(transaction)
             if not self.get_card_status():
+                self.add_violation(CardNotActive())
                 is_valid = False
+            #print(transaction.get_amount())
             if transaction.get_amount() > self.get_limit():
                 self.add_violation(InsufficientLimit())
                 is_valid = False
@@ -58,11 +62,9 @@ class Account(object):
             if not is_valid_by_recent:
                 self.add_violation(violation)
                 is_valid = False
-
             if is_valid:
                 self.__recent_transactions.add_recent_transaction(transaction)
-                self.set_limit(self.get_limit()-transaction.get_amount())
-
+                self.deduct_amount(transaction.get_amount())
             return is_valid
 
     instance = None

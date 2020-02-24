@@ -23,8 +23,8 @@ class TestRecentTransactions(unittest.TestCase):
         test_transaction["merchant"] = "Burger King"
         test_transaction["amount"] = 20
         test_transaction["time"] = transaction_time_str
-        print(json.dumps(test_transaction))
-        transaction = Transaction((test_transaction), self.config["date_time_format"])
+        #print(json.dumps(test_transaction))
+        transaction = Transaction(test_transaction, self.config["date_time_format"])
         self.assertEqual(recent_transactions.is_valid_transaction(transaction), (True, None))
         recent_transactions.add_recent_transaction(transaction)
 
@@ -32,8 +32,8 @@ class TestRecentTransactions(unittest.TestCase):
         transaction_time_str = transaction_time.strftime(self.config["date_time_format"])
         test_transaction["amount"] = 21
         test_transaction["time"] = transaction_time_str
-        print(json.dumps(test_transaction))
-        transaction = Transaction((test_transaction), self.config["date_time_format"])
+        #print(json.dumps(test_transaction))
+        transaction = Transaction(test_transaction, self.config["date_time_format"])
         self.assertEqual(recent_transactions.is_valid_transaction(transaction), (True, None))
         recent_transactions.add_recent_transaction(transaction)
 
@@ -42,8 +42,8 @@ class TestRecentTransactions(unittest.TestCase):
         test_transaction["amount"] = 22
         test_transaction["time"] = transaction_time_str
         test_transaction["time"] = transaction_time_str
-        print(json.dumps(test_transaction))
-        transaction = Transaction((test_transaction), self.config["date_time_format"])
+        #print(json.dumps(test_transaction))
+        transaction = Transaction(test_transaction, self.config["date_time_format"])
         self.assertEqual(recent_transactions.is_valid_transaction(transaction), (True, None))
         recent_transactions.add_recent_transaction(transaction)
         #sleep(20)
@@ -52,8 +52,8 @@ class TestRecentTransactions(unittest.TestCase):
         test_transaction["amount"] = 23
         test_transaction["time"] = transaction_time_str
         test_transaction["time"] = transaction_time_str
-        print(json.dumps(test_transaction))
-        transaction = Transaction((test_transaction), self.config["date_time_format"])
+        #print(json.dumps(test_transaction))
+        transaction = Transaction(test_transaction, self.config["date_time_format"])
         is_valid = recent_transactions.is_valid_transaction(transaction)
         self.assertEqual((is_valid[0], type(is_valid[1])), (False, type(HighFrequencySmallIntervalViolation())))
         recent_transactions.add_recent_transaction(transaction)
@@ -70,7 +70,7 @@ class TestRecentTransactions(unittest.TestCase):
         test_transaction["merchant"] = "Burger King"
         test_transaction["amount"] = 20
         test_transaction["time"] = transaction_time_str
-        print(json.dumps(test_transaction))
+        #print(json.dumps(test_transaction))
         transaction = Transaction((test_transaction), self.config["date_time_format"])
         self.assertEqual(recent_transactions.is_valid_transaction(transaction), (True, None))
         recent_transactions.add_recent_transaction(transaction)
@@ -79,7 +79,7 @@ class TestRecentTransactions(unittest.TestCase):
         transaction_time_str = transaction_time.strftime(self.config["date_time_format"])
         test_transaction["amount"] = 21
         test_transaction["time"] = transaction_time_str
-        print(json.dumps(test_transaction))
+        #print(json.dumps(test_transaction))
         transaction = Transaction((test_transaction), self.config["date_time_format"])
         self.assertEqual(recent_transactions.is_valid_transaction(transaction), (True, None))
         recent_transactions.add_recent_transaction(transaction)

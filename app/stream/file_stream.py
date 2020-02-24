@@ -1,26 +1,42 @@
 import json
 import sys
+import yaml
+import logging.config
+
+from settings import dictConfig
+
+logging.config.dictConfig(dictConfig)
+yaml.warnings({'YAMLLoadWarning': False})
 
 from app.stream.base_stream import BaseStream
 from app.account.account import Account
 from app.transaction.transaction import Transaction
 
 
-class FileStream(BaseStream):
+stream_logger = logging.getLogger('stream_logger')
 
+
+class FileStream(BaseStream):
     def __init__(self):
         self.account = None
 
     def process_event(self, event):
+        stream_logger.info("Event received - " + event)
         event_dict = json.loads(event)
+
         if "account" in event_dict:
-            self.account = Account(event_dict)
+            self.account = Account(event_dict.get('account'))
         elif "transaction" in event_dict:
             if not self.account:
                 sys.stdout.write("account-not-initialized")
             else:
-                self.account.validate_transaction(Transaction(event_dict))
+                self.account.validate_transaction(Transaction(event_dict.get('transaction')))
+
+        if self.account:
+            sys.stdout.write(str(self.account))
+
+        sys.stdout.write('\n')
 
     def read_from_source(self):
         for line in sys.stdin:
-            print(line)
+            self.process_event(line)

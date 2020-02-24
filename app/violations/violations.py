@@ -36,8 +36,15 @@ class AccountAlreadyIntialized(BaseViolation):
 
 class InsufficientLimit(BaseViolation):
     def __init__(self):
-        code = 400
+        code = 401
         message = "insufficient-limit"
+        super().__init__(code, message)
+
+
+class CardNotActive(BaseViolation):
+    def __init__(self):
+        code = 402
+        message = "card-not-active"
         super().__init__(code, message)
 
 

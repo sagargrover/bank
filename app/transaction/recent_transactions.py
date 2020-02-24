@@ -15,10 +15,6 @@ class RecentTransactions:
     def in_window(self, transaction):
         transaction_time = transaction.get_time()
         current_time = datetime.datetime.now()
-        #print(current_time)
-        #print(transaction_time)
-        #print(current_time - transaction_time)
-        #print(self.__window_delta_time)
         if current_time - transaction_time <= self.__window_delta_time:
             return True
         return False
@@ -26,14 +22,12 @@ class RecentTransactions:
     def remove_expired_transaction(self):
         while len(self.__queue) != 0 and not self.in_window(self.__queue[0]):
             self.__transactions_set.discard(self.__queue[0].get_distinct_key())
-            print("Popping")
             self.__queue.pop()
 
     def is_valid_transaction(self, transaction):
         self.remove_expired_transaction()
         if transaction.get_distinct_key() in self.__transactions_set:
                 return False, DuplicateTransactionViolation()
-        #print(len(self.__queue))
         if len(self.__queue) == self.__window_size:
             return False, HighFrequencySmallIntervalViolation()
         return True, None

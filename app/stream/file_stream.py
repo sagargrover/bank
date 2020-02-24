@@ -11,6 +11,7 @@ yaml.warnings({'YAMLLoadWarning': False})
 from app.stream.base_stream import BaseStream
 from app.account.account import Account
 from app.transaction.transaction import Transaction
+from app.violations.violations import AccountAlreadyIntialized
 
 
 stream_logger = logging.getLogger('stream_logger')
@@ -25,7 +26,10 @@ class FileStream(BaseStream):
         event_dict = json.loads(event)
 
         if "account" in event_dict:
-            self.account = Account(event_dict.get('account'))
+            if not self.account:
+                self.account = Account(event_dict.get('account'))
+            else:
+                self.account.add_violation(AccountAlreadyIntialized())
         elif "transaction" in event_dict:
             if not self.account:
                 sys.stdout.write("account-not-initialized")
@@ -37,6 +41,6 @@ class FileStream(BaseStream):
 
         sys.stdout.write('\n')
 
-    def read_from_source(self):
-        for line in sys.stdin:
+    def read_from_source(self, source):
+        for line in source:
             self.process_event(line)

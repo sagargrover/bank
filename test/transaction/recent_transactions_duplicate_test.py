@@ -3,7 +3,7 @@ import datetime
 import yaml
 from mock import patch
 
-from app.violations.violations import HighFrequencySmallIntervalViolation, DuplicateTransactionViolation
+from app.violations.violations import DuplicateTransactionViolation
 from app.transaction.transaction import Transaction
 from app.transaction.recent_transactions import RecentTransactions
 
@@ -15,7 +15,6 @@ class TestRecentTransactions(unittest.TestCase):
         self.datetime_obj = datetime.datetime
         delta = datetime.timedelta(minutes=2)
         self.recent_transactions = RecentTransactions(3, delta)
-        # import ipdb; ipdb.set_trace()
 
     def test_duplicate(self):
         with patch('datetime.datetime') as mock_date:

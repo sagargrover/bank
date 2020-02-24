@@ -13,3 +13,121 @@ INFO 2020-02-24 20:51:01,751 - Event received - {"account": {"active-card": true
 INFO 2020-02-24 20:51:01,753 - Event received - {"transaction": {"merchant": "Burger King", "amount": 20, "time":"2019-02-13T10:00:00.000Z"}}
 
 INFO 2020-02-24 20:51:01,758 - Event received - {"transaction": {"merchant": "Habbib's", "amount": 90, "time":"2019-02-13T11:00:00.000Z"}}
+INFO 2020-02-24 22:40:45,689 - Event received - {"account": {"active-card": true, "available-limit": 100}}
+
+INFO 2020-02-24 22:40:45,691 - Event received - {"transaction": {"merchant": "Burger King", "amount": 20, "time":"2019-02-13T10:00:00.000Z"}}
+
+INFO 2020-02-24 22:40:45,699 - Event received - {"transaction": {"merchant": "Habbib's", "amount": 90, "time":"2019-02-13T11:00:00.000Z"}}
+INFO 2020-02-24 22:42:39,385 - Event received - {"account": {"active-card": true, "available-limit": 100}}
+
+INFO 2020-02-24 22:42:39,387 - Event received - {"transaction": {"merchant": "Burger King", "amount": 20, "time":"2019-02-13T10:00:00.000Z"}}
+
+INFO 2020-02-24 22:42:39,394 - Event received - {"transaction": {"merchant": "Habbib's", "amount": 90, "time":"2019-02-13T11:00:00.000Z"}}
+INFO 2020-02-24 23:05:38,867 - Event received - {"account": {"active-card": true, "available-limit": 100}}
+
+INFO 2020-02-24 23:05:38,869 - Event received - {"transaction": {"merchant": "Burger King", "amount": 20, "time":"2019-02-13T10:00:00.000Z"}}
+
+INFO 2020-02-24 23:05:38,876 - Event received - {"transaction": {"merchant": "Habbib's", "amount": 90, "time":"2019-02-13T11:00:00.000Z"}}
+INFO 2020-02-24 23:09:21,884 - Event received - {"account": {"active-card": true, "available-limit": 100}}
+INFO 2020-02-24 23:09:21,886 - Event received - {"transaction": {"merchant": "Burger King", "amount": 20, "time":"2019-02-13T10:00:00.000Z"}}
+INFO 2020-02-24 23:09:21,892 - Event received - {"transaction": {"merchant": "Habbib's", "amount": 90, "time":"2019-02-13T11:00:00.000Z"}}
+INFO 2020-02-24 23:10:03,017 - Event received - {"account": {"active-card": true, "available-limit": 100}}
+INFO 2020-02-24 23:10:03,019 - Event received - {"transaction": {"merchant": "Burger King", "amount": 20, "time":"2019-02-13T10:00:00.000Z"}}
+INFO 2020-02-24 23:10:03,025 - Event received - {"transaction": {"merchant": "Habbib's", "amount": 90, "time":"2019-02-13T11:00:00.000Z"}}
+INFO 2020-02-24 23:11:53,487 - Event received - {"account": {"active-card": true, "available-limit": 100}}
+INFO 2020-02-24 23:11:53,489 - Event received - {"transaction": {"merchant": "Burger King", "amount": 20, "time":"2019-02-13T10:00:00.000Z"}}
+INFO 2020-02-24 23:11:53,494 - Event received - {"transaction": {"merchant": "Habbib's", "amount": 90, "time":"2019-02-13T11:00:00.000Z"}}
+INFO 2020-02-24 23:14:23,191 - Event received - {"account": {"active-card": true, "available-limit": 100}}
+INFO 2020-02-24 23:14:23,193 - Event received - {"transaction": {"merchant": "Burger King", "amount": 20, "time":"2019-02-13T10:00:00.000Z"}}
+INFO 2020-02-24 23:14:23,200 - Event received - {"transaction": {"merchant": "Habbib's", "amount": 90, "time":"2019-02-13T11:00:00.000Z"}}
+INFO 2020-02-24 23:17:06,841 - Event received - {"account": {"active-card": true, "available-limit": 100}}
+INFO 2020-02-24 23:17:06,843 - Event received - {"transaction": {"merchant": "Burger King", "amount": 20, "time":"2019-02-13T10:00:00.000Z"}}
+INFO 2020-02-24 23:17:06,849 - Event received - {"transaction": {"merchant": "Habbib's", "amount": 90, "time":"2019-02-13T11:00:00.000Z"}}
+INFO 2020-02-24 23:17:06,853 - Event received - {"account": {"active-card": true, "available-limit": 100}}
+INFO 2020-02-24 23:17:06,855 - Event received - {"account": {"active-card": true, "available-limit": 350}}
+INFO 2020-02-24 23:18:09,526 - Event received - {"account": {"active-card": true, "available-limit": 100}}
+INFO 2020-02-24 23:18:09,528 - Event received - {"transaction": {"merchant": "Burger King", "amount": 20, "time":"2019-02-13T10:00:00.000Z"}}
+INFO 2020-02-24 23:18:09,535 - Event received - {"transaction": {"merchant": "Habbib's", "amount": 90, "time":"2019-02-13T11:00:00.000Z"}}
+INFO 2020-02-24 23:18:09,539 - Event received - {"account": {"active-card": true, "available-limit": 100}}
+INFO 2020-02-24 23:18:09,540 - Event received - {"account": {"active-card": true, "available-limit": 350}}
+INFO 2020-02-24 23:19:56,612 - Event received - {"account": {"active-card": true, "available-limit": 100}}
+INFO 2020-02-24 23:19:56,614 - Event received - {"transaction": {"merchant": "Burger King", "amount": 20, "time":"2019-02-13T10:00:00.000Z"}}
+INFO 2020-02-24 23:19:56,619 - Event received - {"transaction": {"merchant": "Habbib's", "amount": 90, "time":"2019-02-13T11:00:00.000Z"}}
+INFO 2020-02-24 23:19:56,623 - Event received - {"account": {"active-card": true, "available-limit": 100}}
+INFO 2020-02-24 23:19:56,625 - Event received - {"account": {"active-card": true, "available-limit": 350}}
+INFO 2020-02-24 23:19:56,629 - Event received - {"account": {"active-card": true, "available-limit": 100}}
+INFO 2020-02-24 23:19:56,630 - Event received - {"transaction": {"merchant": "Burger King", "amount": 20, "time":"2019-02-13T10:00:00.000Z"}}
+INFO 2020-02-24 23:20:07,868 - Event received - {"account": {"active-card": true, "available-limit": 100}}
+INFO 2020-02-24 23:20:07,870 - Event received - {"transaction": {"merchant": "Burger King", "amount": 20, "time":"2019-02-13T10:00:00.000Z"}}
+INFO 2020-02-24 23:20:07,876 - Event received - {"transaction": {"merchant": "Habbib's", "amount": 90, "time":"2019-02-13T11:00:00.000Z"}}
+INFO 2020-02-24 23:20:07,881 - Event received - {"account": {"active-card": true, "available-limit": 100}}
+INFO 2020-02-24 23:20:07,882 - Event received - {"account": {"active-card": true, "available-limit": 350}}
+INFO 2020-02-24 23:20:07,885 - Event received - {"account": {"active-card": true, "available-limit": 100}}
+INFO 2020-02-24 23:20:07,886 - Event received - {"transaction": {"merchant": "Burger King", "amount": 20, "time":"2019-02-13T10:00:00.000Z"}}
+INFO 2020-02-24 23:20:40,058 - Event received - {"account": {"active-card": true, "available-limit": 100}}
+INFO 2020-02-24 23:20:40,060 - Event received - {"transaction": {"merchant": "Burger King", "amount": 20, "time":"2019-02-13T10:00:00.000Z"}}
+INFO 2020-02-24 23:20:40,065 - Event received - {"transaction": {"merchant": "Habbib's", "amount": 90, "time":"2019-02-13T11:00:00.000Z"}}
+INFO 2020-02-24 23:20:40,069 - Event received - {"account": {"active-card": true, "available-limit": 100}}
+INFO 2020-02-24 23:20:40,070 - Event received - {"account": {"active-card": true, "available-limit": 350}}
+INFO 2020-02-24 23:20:40,073 - Event received - {"account": {"active-card": true, "available-limit": 100}}
+INFO 2020-02-24 23:20:40,074 - Event received - {"transaction": {"merchant": "Burger King", "amount": 20, "time":"2019-02-13T10:00:00.000Z"}}
+INFO 2020-02-24 23:25:15,300 - Event received - {"account": {"active-card": true, "available-limit": 100}}
+INFO 2020-02-24 23:25:15,302 - Event received - {"transaction": {"merchant": "Burger King", "amount": 20, "time":"2019-02-13T10:00:00.000Z"}}
+INFO 2020-02-24 23:25:15,311 - Event received - {"transaction": {"merchant": "Habbib's", "amount": 90, "time":"2019-02-13T11:00:00.000Z"}}
+INFO 2020-02-24 23:25:15,316 - Event received - {"account": {"active-card": true, "available-limit": 100}}
+INFO 2020-02-24 23:25:15,317 - Event received - {"account": {"active-card": true, "available-limit": 350}}
+INFO 2020-02-24 23:25:15,320 - Event received - {"account": {"active-card": true, "available-limit": 100}}
+INFO 2020-02-24 23:25:15,321 - Event received - {"transaction": {"merchant": "Burger King", "amount": 20, "time":"2019-02-13T10:00:00.000Z"}}
+INFO 2020-02-24 23:25:15,325 - Event received - {"account": {"active-card": true, "available-limit": 100}}
+INFO 2020-02-24 23:25:15,326 - Event received - {"transaction": {"merchant": "Burger King", "amount": 20, "time":"2019-02-13T10:00:00.000Z"}}
+INFO 2020-02-24 23:25:15,327 - Event received - {"transaction": {"merchant": "Burger King", "amount": 21, "time":"2019-02-13T10:00:00.000Z"}}
+INFO 2020-02-24 23:25:15,329 - Event received - {"transaction": {"merchant": "Burger King", "amount": 22, "time":"2019-02-13T10:00:00.000Z"}}
+INFO 2020-02-24 23:25:15,330 - Event received - {"transaction": {"merchant": "Habbib's", "amount": 90, "time":"2019-02-13T10:01:00.000Z"}}
+INFO 2020-02-24 23:25:28,192 - Event received - {"account": {"active-card": true, "available-limit": 100}}
+INFO 2020-02-24 23:25:28,194 - Event received - {"transaction": {"merchant": "Burger King", "amount": 20, "time":"2019-02-13T10:00:00.000Z"}}
+INFO 2020-02-24 23:25:28,200 - Event received - {"transaction": {"merchant": "Habbib's", "amount": 90, "time":"2019-02-13T11:00:00.000Z"}}
+INFO 2020-02-24 23:25:28,204 - Event received - {"account": {"active-card": true, "available-limit": 100}}
+INFO 2020-02-24 23:25:28,206 - Event received - {"account": {"active-card": true, "available-limit": 350}}
+INFO 2020-02-24 23:25:28,209 - Event received - {"account": {"active-card": true, "available-limit": 100}}
+INFO 2020-02-24 23:25:28,210 - Event received - {"transaction": {"merchant": "Burger King", "amount": 20, "time":"2019-02-13T10:00:00.000Z"}}
+INFO 2020-02-24 23:25:28,214 - Event received - {"account": {"active-card": true, "available-limit": 100}}
+INFO 2020-02-24 23:25:28,215 - Event received - {"transaction": {"merchant": "Burger King", "amount": 20, "time":"2019-02-13T10:00:00.000Z"}}
+INFO 2020-02-24 23:25:28,216 - Event received - {"transaction": {"merchant": "Burger King", "amount": 21, "time":"2019-02-13T10:00:00.000Z"}}
+INFO 2020-02-24 23:25:28,218 - Event received - {"transaction": {"merchant": "Burger King", "amount": 22, "time":"2019-02-13T10:00:00.000Z"}}
+INFO 2020-02-24 23:25:28,219 - Event received - {"transaction": {"merchant": "Habbib's", "amount": 90, "time":"2019-02-13T10:01:00.000Z"}}
+INFO 2020-02-24 23:26:30,272 - Event received - {"account": {"active-card": true, "available-limit": 100}}
+INFO 2020-02-24 23:26:30,274 - Event received - {"transaction": {"merchant": "Burger King", "amount": 20, "time":"2019-02-13T10:00:00.000Z"}}
+INFO 2020-02-24 23:26:30,282 - Event received - {"transaction": {"merchant": "Habbib's", "amount": 90, "time":"2019-02-13T11:00:00.000Z"}}
+INFO 2020-02-24 23:26:30,287 - Event received - {"account": {"active-card": true, "available-limit": 100}}
+INFO 2020-02-24 23:26:30,288 - Event received - {"account": {"active-card": true, "available-limit": 350}}
+INFO 2020-02-24 23:26:30,291 - Event received - {"account": {"active-card": true, "available-limit": 100}}
+INFO 2020-02-24 23:26:30,293 - Event received - {"transaction": {"merchant": "Burger King", "amount": 20, "time":"2019-02-13T10:00:00.000Z"}}
+INFO 2020-02-24 23:26:30,298 - Event received - {"account": {"active-card": true, "available-limit": 100}}
+INFO 2020-02-24 23:26:30,299 - Event received - {"transaction": {"merchant": "Burger King", "amount": 20, "time":"2019-02-13T10:00:00.000Z"}}
+INFO 2020-02-24 23:26:30,300 - Event received - {"transaction": {"merchant": "Burger King", "amount": 21, "time":"2019-02-13T10:00:00.000Z"}}
+INFO 2020-02-24 23:26:30,301 - Event received - {"transaction": {"merchant": "Burger King", "amount": 22, "time":"2019-02-13T10:00:00.000Z"}}
+INFO 2020-02-24 23:26:30,302 - Event received - {"transaction": {"merchant": "Habbib's", "amount": 90, "time":"2019-02-13T10:01:00.000Z"}}
+INFO 2020-02-24 23:29:17,996 - Event received - {"account": {"active-card": true, "available-limit": 100}}
+INFO 2020-02-24 23:29:17,998 - Event received - {"transaction": {"merchant": "Burger King", "amount": 20, "time":"2019-02-13T10:00:00.000Z"}}
+INFO 2020-02-24 23:29:18,005 - Event received - {"transaction": {"merchant": "Habbib's", "amount": 90, "time":"2019-02-13T11:00:00.000Z"}}
+INFO 2020-02-24 23:29:18,008 - Event received - {"account": {"active-card": true, "available-limit": 100}}
+INFO 2020-02-24 23:29:18,010 - Event received - {"account": {"active-card": true, "available-limit": 350}}
+INFO 2020-02-24 23:29:18,011 - Event received - {"account": {"active-card": true, "available-limit": 100}}
+INFO 2020-02-24 23:29:18,013 - Event received - {"transaction": {"merchant": "Burger King", "amount": 20, "time":"2019-02-13T10:00:00.000Z"}}
+INFO 2020-02-24 23:29:18,017 - Event received - {"account": {"active-card": true, "available-limit": 100}}
+INFO 2020-02-24 23:29:18,018 - Event received - {"transaction": {"merchant": "Burger King", "amount": 20, "time":"2019-02-13T10:00:00.000Z"}}
+INFO 2020-02-24 23:29:18,020 - Event received - {"transaction": {"merchant": "Burger King", "amount": 21, "time":"2019-02-13T10:00:00.000Z"}}
+INFO 2020-02-24 23:29:18,021 - Event received - {"transaction": {"merchant": "Burger King", "amount": 22, "time":"2019-02-13T10:00:00.000Z"}}
+INFO 2020-02-24 23:29:18,022 - Event received - {"transaction": {"merchant": "Habbib's", "amount": 90, "time":"2019-02-13T10:01:00.000Z"}}
+INFO 2020-02-24 23:30:07,439 - Event received - {"account": {"active-card": true, "available-limit": 100}}
+INFO 2020-02-24 23:30:07,440 - Event received - {"transaction": {"merchant": "Burger King", "amount": 20, "time":"2019-02-13T10:00:00.000Z"}}
+INFO 2020-02-24 23:30:07,442 - Event received - {"transaction": {"merchant": "Habbib's", "amount": 90, "time":"2019-02-13T11:00:00.000Z"}}
+INFO 2020-02-24 23:30:07,445 - Event received - {"account": {"active-card": true, "available-limit": 100}}
+INFO 2020-02-24 23:30:07,446 - Event received - {"account": {"active-card": true, "available-limit": 350}}
+INFO 2020-02-24 23:30:07,448 - Event received - {"account": {"active-card": true, "available-limit": 100}}
+INFO 2020-02-24 23:30:07,449 - Event received - {"transaction": {"merchant": "Burger King", "amount": 20, "time":"2019-02-13T10:00:00.000Z"}}
+INFO 2020-02-24 23:30:07,452 - Event received - {"account": {"active-card": true, "available-limit": 100}}
+INFO 2020-02-24 23:30:07,453 - Event received - {"transaction": {"merchant": "Burger King", "amount": 20, "time":"2019-02-13T10:00:00.000Z"}}
+INFO 2020-02-24 23:30:07,454 - Event received - {"transaction": {"merchant": "Burger King", "amount": 21, "time":"2019-02-13T10:00:00.000Z"}}
+INFO 2020-02-24 23:30:07,456 - Event received - {"transaction": {"merchant": "Burger King", "amount": 22, "time":"2019-02-13T10:00:00.000Z"}}
+INFO 2020-02-24 23:30:07,457 - Event received - {"transaction": {"merchant": "Habbib's", "amount": 90, "time":"2019-02-13T10:01:00.000Z"}}

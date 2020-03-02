@@ -49,6 +49,7 @@ To verify tests run
 ```
 python -m unittest discover -s test/ -p '*_test.py'
 ```
+All inputs given in assignment are covered in file_stream_test
 
 ## Config
 To alter window size and time for validity checks, edit config.yml with corresponding params

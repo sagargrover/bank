@@ -49,3 +49,6 @@ To verify tests run
 ```
 python -m unittest discover -s test/ -p '*_test.py'
 ```
+
+## Config
+To alter window size and time for validity checks, edit config.yml with corresponding params

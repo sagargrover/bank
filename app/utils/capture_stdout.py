@@ -2,6 +2,9 @@ from io import StringIO
 import sys
 
 class Capturing(list):
+    """
+    Helper function to catch stdout to list
+    """
     def __enter__(self):
         self._stdout = sys.stdout
         sys.stdout = self._stringio = StringIO()

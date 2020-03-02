@@ -30,4 +30,7 @@ class Transaction:
         return self.__time
 
     def get_distinct_key(self):
+        """
+        :return: Key to identify a similar transaction
+        """
         return self.__merchant + "#####" + str(int(self.__amount))

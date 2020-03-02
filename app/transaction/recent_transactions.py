@@ -5,6 +5,9 @@ from app.violations.violations import DuplicateTransactionViolation, HighFrequen
 
 
 class RecentTransactions:
+    """
+    Stores transactions in recent window and enforces validity checks
+    """
     def __init__(self, window_size, window_delta_time):
         self.__window_size = window_size
         self.__window_delta_time = window_delta_time

@@ -18,6 +18,9 @@ stream_logger = logging.getLogger('stream_logger')
 
 
 class FileStream(BaseStream):
+    """
+    Reads from input source, creates account and handles transactions
+    """
     def __init__(self):
         self.account = None
 
